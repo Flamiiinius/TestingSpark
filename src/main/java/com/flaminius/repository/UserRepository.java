@@ -18,9 +18,9 @@ public class UserRepository {
         return users.values().stream().toList();
     }
 
-    public void save(User user){
+    public User save(User user){
         // Ignoring collisions for now
-        users.put(user.getId(), user);
+        return users.put(user.getId(), user);
     }
 
 }
